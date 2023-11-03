@@ -1,0 +1,42 @@
+.module--not-found-block {
+    @apply relative;
+
+    .bg {
+        @apply w-full;
+    }
+}
+.not-found-block {
+    @apply absolute top-0 left-0 w-full h-full flex;
+
+    .wrapper {
+        @apply flex flex-wrap w-full items-start md:items-center pt-24 md:pt-0;
+
+        .content-wrapper {
+            @apply block w-full md:w-1/2 text-white text-center md:text-left;
+
+            .module-title {
+                @apply text-[70px] md:text-[102px] leading-tight;
+            }
+
+            .subheading {
+                @apply text-18px uppercase text-mint tracking-[1.8px];
+            }
+
+            .description {
+                @apply leading-tight;
+            }
+
+            .button-wrap {
+                @apply mt-6;
+
+                .button {
+                    @apply inline-block text-14px text-white leading-none uppercase font-bold py-2.5 px-9 bg-mint rounded-full;
+
+                    &:hover {
+                        @apply text-purple;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.module--retailer-form {
+    @apply relative pt-10 pb-28;
+    background: rgb(224,224,236);
+    background: linear-gradient(180deg, rgb(224,224,236) 0%, rgb(255,255,255) 100%);
+
+    .wrapper {
+        @apply flex flex-wrap relative;
+
+        .form-column {
+            @apply block w-full md:w-2/4 z-10;
+
+            h3 {
+                @apply text-24px md:text-30px text-lightpurple text-left md:text-center mb-2.5;
+            }
+
+            .description {
+                @apply max-w-[410px] mx-auto mb-10 text-left md:text-center;
+
+                p {
+                    @apply text-14px;
+                }
+            }
+            .form-wrapper {
+                .form-row {
+                    @apply flex flex-wrap items-end justify-between mb-3;
+
+                    p {
+                        @apply w-full;
+                    }
+
+                    input,
+                    textarea,
+                    select {
+                        @apply w-full py-4 px-2.5 rounded leading-tight;
+                        border: 0.25px solid #5C605F80;
+                    }
+
+                    .required {
+                        @apply text-red;
+                    }
+
+                    .col {
+                        width: calc(50% - 10px);
+                    }
+
+                    .label {
+                        @apply block w-full text-left font-semibold tracking-[0.5px];
+                    }
+
+                    .wpcf7-checkbox,
+                    .wpcf7-radio {
+                        @apply flex flex-wrap items-center text-[#9F9FBF];
+                    }
+
+                    .wpcf7-list-item {
+                        @apply m-0 flex flex-wrap items-center;
+                        
+                        input {
+                            @apply w-auto mr-2;
+                        }
+
+                        &:not(.last) {
+                            @apply mr-10;
+                        }
+                    }
+                    .wpcf7-form-control-wrap {
+                        @apply w-full;
+                    }
+                }
+
+                .form-submit {
+                    input {
+                        @apply block w-full p-5 text-16px md:text-18px text-white font-bold leading-none uppercase bg-lightpurple rounded-full tracking-[1.8px];
+
+                        &:hover {
+                            @apply text-mint;
+                        }
+                    }
+                }
+            }
+        }
+
+        .graphic {
+            img {
+                @apply relative md:absolute block right-[20%] md:-right-12 top-0 md:-top-44 z-0 w-full max-w-[873px];
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .col {
+        width: 100% !important;
+
+        &:not(:last-child) {
+            @apply mb-2.5;
+        }
+    }
+
+}

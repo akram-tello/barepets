@@ -1,0 +1,27 @@
+.module--image-carousel {
+    @apply text-center bg-white py-40px md:py-80px;
+
+    .module-title {
+        @apply text-lightpurple mb-10px md:mb-15px; 
+    }
+
+    p {
+        @apply text-purple text-12px md:text-16px;
+    }
+
+    .image-carousel {
+        @apply mt-25px md:mt-50px relative;
+
+        .owl-nav button {
+            @apply absolute top-[50%] text-40px text-purple;
+
+            &.owl-prev {
+                @apply left-10px;
+            }
+
+            &.owl-next {
+                @apply right-10px;
+            }
+        }
+    }
+}

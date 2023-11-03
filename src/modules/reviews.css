@@ -1,0 +1,39 @@
+.module--reviews {
+    @apply relative z-[2];
+
+    .module-title {
+        @apply text-center mb-30px;
+    }
+
+    .woocommerce-Reviews {
+        @apply flex flex-col-reverse;
+    }
+
+    #review_form_wrapper {
+        @apply mb-30px;
+
+        input,
+        textarea {
+            @apply border border-purple py-5px px-10px rounded-5px;
+        }
+    }
+
+    #comments {
+        .nav-links {
+            @apply flex justify-center;
+
+            * {
+                @apply text-16px;
+            }
+
+            a,
+            span {
+                @apply inline-block py-5px px-15px border border-purple mx-5px;
+
+                &.current {
+                    @apply bg-purple text-white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.module--sample-block  {
+    @apply py-40px md:py-[250px] bg-lightpurple;
+
+    .module-title {
+        @apply text-red text-center;
+    }
+}

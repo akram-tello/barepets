@@ -1,0 +1,201 @@
+.home #page {
+    @apply mt-[-80px] md:mt-[-90px];
+}
+
+.module--hero {
+    @apply relative;
+
+    .bg {
+        /*@apply max-h-[calc(100vh-90px)] object-cover object-bottom;*/
+    }
+
+    .kibble {
+        @apply absolute z-[1] translate-y-0 opacity-[1];
+        animation: moveVertical 5s ease 5s infinite normal both;
+
+        &-1 {
+            @apply top-[5%] left-[-12px] w-25px md:w-55px md:top-[10%];
+            animation-duration: 7s;
+        }
+
+        &-2 {
+            @apply top-[40%] left-[10%] w-35px md:w-80px;
+            animation-duration: 6s;
+        }
+
+        &-3 {
+            @apply top-[70%] left-[5%] w-25px md:w-55px;
+            animation-duration: 7s;
+        }
+
+        &-4 {
+            @apply top-[90%] left-[10%] w-35px md:w-85px md:top-[80%];
+            animation-duration: 6s;
+        }
+
+        &-5 {
+            @apply top-[50%] right-[4%] w-40px md:w-105px md:right-[10%];
+            animation-duration: 9s;
+        }
+
+        &-6 {
+            @apply top-[45%] right-[-15px] w-30px md:w-80px md:right-[5%];
+        }
+
+        &-7 {
+            @apply top-[55%] right-[-10px] w-30px md:w-50px md:top-[80%] md:right-[10%];
+        }
+    }
+}
+
+@keyframes moveVertical {
+	0% {
+        transform: translateY(10px);
+	}
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+	100% {
+        transform: translateY(10px);
+	}
+}
+
+.hero {
+    &-title {
+        @apply lowercase text-lightpurple mt-0 md:mt-15px;
+    }
+
+    &-item {
+        @apply relative;
+
+        .bg {
+            @apply w-full;
+        }
+
+        p {
+            @apply text-purple text-16px leading-tight;
+        }
+    
+        .cta {
+            @apply mt-5 md:mt-6;
+        }
+    }
+
+    &-content {
+        @apply absolute top-0 left-0 w-full h-full flex pt-80px md:pt-90px;
+
+        .wrapper {
+            @apply py-30px;
+        }
+
+        &.mobile-top {
+            @apply items-start;
+        }
+
+        &.mobile-middle {
+            @apply items-center;
+        }
+
+        &.mobile-bottom {
+            @apply items-end;
+        }
+
+
+        &.mobile-left .wrapper {
+            @apply text-left;
+        }
+
+        &.mobile-right .wrapper {
+            @apply text-right;
+        }
+
+        &.mobile-center .wrapper{
+            @apply text-center;
+        }
+
+        &.desktop-top {
+            @apply lg:items-start;
+        }
+
+        &.desktop-middle {
+            @apply lg:items-center;
+        }
+
+        &.desktop-bottom {
+            @apply lg:items-end;
+        }
+
+
+        &.desktop-left .wrapper {
+            @apply lg:text-left;
+        }
+
+        &.desktop-right .wrapper {
+            @apply lg:text-right;
+        }
+
+        &.desktop-center .wrapper{
+            @apply lg:text-center;
+        }
+    }
+}
+
+/* About Page Hero */
+.page-id-282 {
+    .module--hero {
+        .kibble {
+            @apply hidden;
+        }
+    }
+    .hero-content {
+        @media (max-width: 1440px) {
+            @apply pt-40px;
+        }
+        
+        .wrapper {
+            @apply text-right ml-auto;
+            margin-right: 15%;
+
+            h2 {
+                @apply text-purple mt-0;
+                max-width: 550px;
+                font-size: 65px;
+                line-height: 75px;
+            }
+            p {
+                @apply relative pr-100px pt-40px;
+
+                .arrow-icon {
+                    @apply absolute -right-30px -top-65px;
+                    max-width: 177px;
+                }
+            }
+        }
+    }
+}
+
+/* Breeders Program */
+.breeders-banner {
+    .wrapper {
+        margin-left: auto;
+        margin-right: 13%;
+        text-align: left !important;
+    }
+    .hero-content {
+        padding-top: 50px;
+    }
+    .hero-title {
+        color: #fff;
+        font-size: 64px;
+        max-width: 426px;
+        line-height: 70px;
+    }
+
+    &.no-kibbles {
+        img.kibble {
+            @apply hidden;
+        }
+    }
+}

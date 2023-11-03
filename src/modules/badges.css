@@ -1,0 +1,27 @@
+.module--badges {
+    @apply py-20px md:py-40px;
+
+    &.wet {
+        @apply bg-[#FF969230];
+    }
+
+    &.dry {
+        @apply bg-[#E0E0EC];
+    }
+
+    &.subscription {
+        @apply bg-lightblue;
+    }
+
+    .badges {
+        @apply flex flex-wrap justify-center md:justify-evenly;
+
+        &-icon {
+            @apply flex-half md:flex-30% lg:flex-20% mb-20px lg:mb-0;
+        }
+
+        img {
+            @apply max-w-70px block mx-auto;
+        }
+    }
+}

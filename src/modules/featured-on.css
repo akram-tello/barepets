@@ -1,0 +1,43 @@
+.module--featured-on {
+    @apply relative pt-10 md:pt-48 pb-10 md:pb-20;
+    background: rgb(42,41,79);
+    background: linear-gradient(0deg, rgb(64,67,110) 0%, rgb(101,101,160) 100%);
+
+    .decor-top {
+        @apply absolute top-0 left-0 block w-full h-full;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI4NyIgdmlld0JveD0iMCAwIDEyODAgODciPg0KICA8ZGVmcz4NCiAgICA8Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCI+DQogICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzEyMzciIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyMzciIHdpZHRoPSIxMjgwIiBoZWlnaHQ9Ijg3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDE1ODkpIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4NCiAgICA8L2NsaXBQYXRoPg0KICA8L2RlZnM+DQogIDxnIGlkPSJNYXNrX0dyb3VwXzY4IiBkYXRhLW5hbWU9Ik1hc2sgR3JvdXAgNjgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTE1ODkpIiBjbGlwLXBhdGg9InVybCgjY2xpcC1wYXRoKSI+DQogICAgPHBhdGggaWQ9IlBhdGhfMjY5OTQiIGRhdGEtbmFtZT0iUGF0aCAyNjk5NCIgZD0iTTIxMTczLDE2NDk2LjU0MXM3Ny44NTUtMjIuMiwxOTAuNjYyLTEzLjc4MywyODIuMjI1LDY5LjY2LDQ5OC43MjksNjguMjc5LDI0Ni4zNTctMzYuOTksMzcxLjg2OS01Ni4xLDIxOC44ODUtMS43ODUsMjE4Ljg4NS0xLjc4NXYtMTg5SDIxMTczWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxMTczIC0xNDg3NykiIGZpbGw9IiNmZmYiLz4NCiAgPC9nPg0KPC9zdmc+DQo=");
+        background-size: 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    .featured-logo-group {
+        @apply flex flex-wrap justify-between;
+
+        .logo-item {
+            @apply flex min-h-[200px];
+
+            &.logo_1,
+            &.logo_5 {
+                @apply items-center md:items-start;
+            }
+    
+            &.logo_2,
+            &.logo_4 {
+                @apply items-center;
+            }
+    
+            &.logo_3 {
+                @apply items-center md:items-end;
+            }
+
+            .logo-wrapper {
+                @apply block w-full max-w-[157px] mx-auto;
+            }
+        }
+    }
+
+    .module-heading {
+        @apply text-18px text-center text-white uppercase font-bold opacity-50;
+    }
+}

@@ -1,0 +1,11 @@
+#page {
+    @apply overflow-x-hidden;
+}
+
+.wrapper {
+    @apply max-w-max-95 md:max-w-wrap px-20px mx-auto;
+}
+
+.module {
+    @apply clear-both;
+}

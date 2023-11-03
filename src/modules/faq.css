@@ -1,0 +1,124 @@
+.module--faq {
+    @apply py-40px md:py-80px relative;
+
+    .module-title {
+        @apply lowercase;
+    }
+
+    &.orange {
+        background: rgb(234,123,73);
+        background: linear-gradient(0deg, rgba(234,123,73,1) 0%, rgba(235,91,86,1) 100%);
+        @apply text-white;
+
+        .decor-top {
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI5MCIgdmlld0JveD0iMCAwIDEyODAgOTAiPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPgogICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzEyMzgiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyMzgiIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjkwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDc1MzIpIiBmaWxsPSIjZmZmIiBzdHJva2U9IiM3MDcwNzAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1wYXRoLTIiPgogICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzEyMzciIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyMzciIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjgzOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA3NTc3KSIgZmlsbD0iI2ZmZiIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMC41IiB4Mj0iMC41IiB5Mj0iMSIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNlYjViNTYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWE3YjQ5Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8ZyBpZD0iTWFza19Hcm91cF82OCIgZGF0YS1uYW1lPSJNYXNrIEdyb3VwIDY4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC03NTMyKSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPgogICAgPGcgaWQ9IkJHX0ZBUXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTc4KSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aC0yKSI+CiAgICAgIDxwYXRoIGlkPSJCYXNlOSIgZD0iTTAsODc3LjMwN1MxMzIuNzc1LDk5MC4xMTUsMzM4LjEsOTkwLjExNSw2NjQuNSw5MDEuNDgsODU5LjcsOTAxLjQ4czQ2MC44LDg4LjYzNSw0NjAuOCw4OC42MzVMMTMzNy40LTguNjQzcy01NS4yLTY3LjIyLTI5Ny42LTgxLjM5UzYzMC0zOS4xODgsMzY4LjYtMzkuMTg4LDAtMTA0LjIxOCwwLTEwNC4yMThaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjguNyA3NzExLjIxOSkiIGZpbGw9InVybCgjbGluZWFyLWdyYWRpZW50KSIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==') bottom center no-repeat;
+            /*background-size: cover;*/
+            @apply absolute top-0 left-0 w-full translate-y-[-99%] overflow-hidden bg-cover md:bg-contain;
+    
+            &:before {
+                content: '';
+                @apply block pt-[11%];
+            }
+        }
+
+        .module-title {
+            @apply text-white text-center;
+        }
+
+        .faq-question {
+            @apply border-white;
+        }
+    }
+
+    &.yellow {
+        @apply bg-yellow;
+
+        .decor-top {
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI5MCIgdmlld0JveD0iMCAwIDEyODAgOTAiPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPgogICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzEyMzgiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyMzgiIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjkwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDc1MzIpIiBmaWxsPSIjZmFjZjY2IiBzdHJva2U9IiM3MDcwNzAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPC9jbGlwUGF0aD4KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1wYXRoLTIiPgogICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzEyMzciIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDEyMzciIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjgzOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA3NTc3KSIgZmlsbD0iI2ZhY2Y2NiIvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+CiAgPGcgaWQ9Ik1hc2tfR3JvdXBfNjgiIGRhdGEtbmFtZT0iTWFzayBHcm91cCA2OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtNzUzMikiIGNsaXAtcGF0aD0idXJsKCNjbGlwLXBhdGgpIj4KICAgIDxnIGlkPSJCR19GQVFzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC03OCkiIGNsaXAtcGF0aD0idXJsKCNjbGlwLXBhdGgtMikiPgogICAgICA8cGF0aCBpZD0iQmFzZTkiIGQ9Ik0wLDg3Ny4zMDdTMTMyLjc3NSw5OTAuMTE1LDMzOC4xLDk5MC4xMTUsNjY0LjUsOTAxLjQ4LDg1OS43LDkwMS40OHM0NjAuOCw4OC42MzUsNDYwLjgsODguNjM1TDEzMzcuNC04LjY0M3MtNTUuMi02Ny4yMi0yOTcuNi04MS4zOVM2MzAtMzkuMTg4LDM2OC42LTM5LjE4OCwwLTEwNC4yMTgsMC0xMDQuMjE4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI4LjcgNzcxMS4yMTkpIiBmaWxsPSIjZmFjZjY2Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K') bottom center no-repeat;
+            /*background-size: cover;*/
+            @apply absolute top-0 left-0 w-full translate-y-[-99%] overflow-hidden bg-cover md:bg-contain;
+    
+            &:before {
+                content: '';
+                @apply block pt-[11%];
+            }
+        }
+
+        .faq-list {
+            @apply md:max-w-[700px];
+        }
+    }
+
+    .bg {
+        @apply absolute top-0 left-0 w-full h-full object-cover object-top z-[1];
+    }
+
+    .wrapper {
+        @apply relative z-[2];
+    }
+
+    .cta {
+        @apply text-center mt-20px;
+
+        a {
+            @apply font-gilroymedium text-14px underline;
+        }
+    }
+}
+
+
+
+.faq-group {
+    &__item {
+        @apply mb-50px;
+    }
+}
+
+.faq {
+    &-list {
+        @apply mt-20px;
+
+        &__item {
+            &.active {
+                .faq-answer { @apply block; }
+                .faq-question::after {
+                    content: '-';
+                }
+            }
+
+            &:first-child {
+                .faq-question { @apply border-0; }
+            }
+
+            &:last-child {
+                .faq-question { @apply border-b; }
+
+                &.active { 
+                    .faq-question { border-bottom: 0; }
+                }
+            }
+        }
+    }
+
+    &-question {
+        color: inherit;
+        @apply py-10px border-t flex flex-wrap justify-between items-center cursor-pointer text-16px md:text-18px font-gilroybold relative tracking-[0.5px];
+    }
+
+    &-question::after {
+        content: '+';
+        @apply absolute top-10px right-0;
+    }
+
+    &-answer {
+        @apply hidden py-10px pb-20px;
+
+        * {
+            color: inherit;
+        }
+
+        p {
+            @apply text-12px md:text-14px;
+        }
+    }
+}

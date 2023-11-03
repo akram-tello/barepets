@@ -1,0 +1,53 @@
+.announcements {
+    @apply bg-lightpurple md:bg-purple py-10px;
+}
+
+.announcement {
+    &--item {
+        p {
+            @apply font-gilroybold text-14px text-white uppercase text-center m-0;
+        }
+    }
+}
+
+.home .site-header {
+    @apply bg-transparent;
+    box-shadow: none;
+} 
+
+.site-header,
+.site-header.is-sticky,
+.site-header:hover {
+    @apply sticky top-0 left-0 w-full bg-white z-[999] bg-white;
+            box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.15);
+       -moz-box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.15);   
+}
+
+
+
+/* .admin-bar .site-header {
+    @apply top-[42px] adminMobile:top-[32px];
+} */
+
+.header--main {
+    @apply flex flex-wrap justify-between items-center py-20px;
+}
+
+.header-logo {
+    img {
+        @apply w-90px;
+    }
+}
+
+.header--mobile {
+    @apply md:hidden;
+}
+
+.header--branding {
+    @apply flex items-center;
+
+    .header-logo {
+        @apply md:mr-35px;
+    }
+}

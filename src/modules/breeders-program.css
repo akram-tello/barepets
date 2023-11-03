@@ -1,0 +1,202 @@
+.bg-lightpurple {
+    @apply bg-[#E0E0EC];
+}
+.bg-orange {
+    @apply bg-[#EA7B49];
+}
+.module--breeders-form {
+    @apply pt-50px pb-200px;
+    background-image: url('img/bg-gradient.png');
+}
+.module--content {
+    h3 {
+        @apply text-lightpurple text-30px font-gilroybold mb-20px;
+        letter-spacing: 0.9px;
+    }
+    p {
+        letter-spacing: 0.42px;
+        line-height: normal;
+    }
+}
+
+form {
+    @apply relative z-20;
+}
+
+.form-holder {
+    &.mb-3 {
+        @apply mb-3;
+    }
+
+    .pl-3 {
+        @apply pl-3;
+    }
+    
+    .pr-3 {
+        @apply pr-3;
+    }
+
+    .mr-4 {
+        @apply mr-4;
+    }
+
+    label {
+        @apply text-16px font-gilroybold;
+        letter-spacing: 0.48px;
+
+        span {
+            @apply text-red;
+        }
+    }
+    .form-control {
+        @apply bg-white rounded-5px font-gilroybold text-[#9DA9B3] min-h-50px w-full;
+        border: 0.25px solid #babfbe;
+        padding: 9px 12px;
+        letter-spacing: 0.42px;
+    }
+
+    input[type="radio"] {
+        @apply mr-10px w-20px h-20px;
+        border: 1px solid #707070;
+
+        &:checked {
+            background-color: #a9a9c9;
+            appearance: none;
+            border-radius: 50%;
+        }
+    }
+
+    .form-radio-check {
+        input {
+            @apply mr-10px w-20px h-20px;
+            border: 1px solid #707070;
+        }
+    }
+
+    select {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgNDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNTYgNDQ4Ij48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5hcnJvd3tmaWxsOiM5REE5QjM7fTwvc3R5bGU+PHBhdGggY2xhc3M9ImFycm93IiBkPSJNMjU1LjkgMTY4YzAtNC4yLTEuNi03LjktNC44LTExLjItMy4yLTMuMi02LjktNC44LTExLjItNC44SDE2Yy00LjIgMC03LjkgMS42LTExLjIgNC44UzAgMTYzLjggMCAxNjhjMCA0LjQgMS42IDguMiA0LjggMTEuNGwxMTIgMTEyYzMuMSAzLjEgNi44IDQuNiAxMS4yIDQuNiA0LjQgMCA4LjItMS41IDExLjQtNC42bDExMi0xMTJjMy0zLjIgNC41LTcgNC41LTExLjR6Ii8+PC9zdmc+Cg==");
+        @apply bg-no-repeat;
+        background-position: right 15px center;
+        background-size: auto 50%;
+        outline: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+.module--breeding-program {
+    @apply pt-30px;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    left: initial;
+    top: initial;
+    height: auto;
+    width: auto;
+}
+.top-right {
+    bottom: initial;
+    left: initial;
+    right: 0;
+    height: auto;
+    width: auto;
+}
+.text-white {
+    @apply text-white;
+}
+.module--join-breeder {
+    @apply py-90px !important;
+
+    .wrapper {
+        @apply text-white text-center m-auto;
+        max-width: 700px;
+    }
+
+    h2 {
+        @apply text-46px mb-20px m-auto;
+        max-width: 637px;
+    }
+    p {
+        @apply text-16px mb-20px;
+        line-height: normal;
+    }
+    .btn-medium {
+        @apply max-w-xs m-auto block;
+    }
+}
+
+.post-287 {
+    .module--logo-carousel {
+        @apply bg-transparent;
+
+        &:after {
+            @apply hidden;
+        }
+
+        &:before {
+            @apply bg-top bg-no-repeat bg-cover translate-y-0;
+            background-image: url(img/bg-featured-breeder.png);
+            top: -41%;
+            height: 150%;
+        }
+
+        .module-heading {
+            @apply text-white text-opacity-30;
+        }
+    }
+    .module--text-scroller {
+        @apply py-20px relative z-20;
+    }
+}
+
+
+/* contact form 7 css */
+.wpcf7-list-item {
+    @apply ml-0 mr-15px;
+
+    label {
+        @apply flex items-center;
+
+        span {
+            @apply text-lightpurple;
+        }
+    }
+}
+.wpcf7-form-control-wrap {
+    @apply relative block;
+  }
+  span.wpcf7-not-valid-tip {
+    @apply text-white text-12px block absolute;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #dc0000;
+    padding: 6px 8px;
+  }
+  div.wpcf7-validation-errors {
+    border: 2px solid #f7e700;
+    display: none !important;
+  }
+  form.wpcf7-form.sent {
+    position: relative;
+  }
+  div.wpcf7-mail-sent-ok {
+    border: 0;
+    position: absolute;
+    top: -5%;
+    background-color: #398f14;
+    left: 50%;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: auto;
+    @include translate(-50%,-50%);
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

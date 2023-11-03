@@ -1,0 +1,41 @@
+.module--page-header {
+    @apply relative;
+
+    .bg {
+        @apply w-full;
+    }
+}
+
+.page-header {
+    @apply absolute top-0 left-0 w-full h-full flex;
+
+    &.align-top {
+        @apply items-start;
+    }
+
+    &.align-middle {
+        @apply items-center;
+    }
+
+    &.align-bottom {
+        @apply items-end;
+    }
+
+    .wrapper {
+        @apply py-30px;
+
+        &.align-left {
+            @apply text-left;
+        }
+
+        &.align-center {
+            @apply text-center;
+        }
+
+        &.align-right {
+            @apply text-right;
+        }
+
+      
+    }
+}  

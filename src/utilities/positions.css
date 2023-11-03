@@ -1,0 +1,15 @@
+.relative {
+    @apply relative;
+}
+
+.absolute {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.fixed {
+    @apply fixed top-0 left-0 w-full h-full;
+}
+
+img.absolute { 
+    @apply object-cover z-[0];
+}

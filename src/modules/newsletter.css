@@ -1,0 +1,55 @@
+.module--newsletter {
+    @apply relative bg-purple overflow-hidden;
+
+    &:before {
+        content: '';
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjg0LjczMSIgaGVpZ2h0PSI2Mi45NDQiIHZpZXdCb3g9IjAgMCAxMjg0LjczMSA2Mi45NDQiPgogIDxwYXRoIGlkPSJQYXRoXzI2OTk0IiBkYXRhLW5hbWU9IlBhdGggMjY5OTQiIGQ9Ik0xNzkzLDY3NzUuMTg2czIwOS41MTktNzIuMTQzLDY0OS45NTUtMjAuMSw2MzQuNzc2LTIwLjQxMyw2MzQuNzc2LTIwLjQxM3YtMjIuNDI5SDE3OTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTc5MyAtNjcxMi4yNDEpIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPgo=') top center no-repeat;
+        background-size: contain;
+        @apply absolute top-[-1px] left-0 w-100% h-75px pt-[100%];
+    }
+
+    svg {
+        @apply hidden md:block absolute top-0 right-[5%];
+    }
+
+    .wrapper {
+        @apply relative z-[5];
+    }
+
+    .module-title {
+        @apply text-white;
+    }
+
+    .newsletter--wrapper {
+        @apply absolute top-0 left-0 w-full h-full pt-[20%] md:pt-[15%];
+
+        .form {
+            @apply mt-20px;
+
+            .row {
+                @apply mb-10px;
+            }
+
+            .row-2 {
+                @apply grid grid-cols-2 gap-10px;
+            }
+
+            input:not([type="submit"]) {
+                @apply w-full rounded-5px bg-white py-20px px-10px font-futurabold text-12px text-[#5C605F];
+            }
+
+            .btn {
+                @apply w-full;
+            }
+        }
+
+        .newsletter {
+            @apply md:flex md:flex-col md:items-end; 
+
+            &--text,
+            &--form {
+                @apply md:w-50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="59.939" viewBox="0 0 69 59.939">
+  <g id="Badge_-_USA" data-name="Badge - USA" transform="translate(128.374 165.244)">
+    <path id="Path_26068" data-name="Path 26068" d="M-64.308-32.192a29.886,29.886,0,0,1-11.116-2.124.469.469,0,0,1-.262-.609.469.469,0,0,1,.609-.262,28.951,28.951,0,0,0,10.769,2.057,28.956,28.956,0,0,0,10.77-2.057.468.468,0,0,1,.609.262.469.469,0,0,1-.262.609A29.889,29.889,0,0,1-64.308-32.192Z" transform="translate(-29.567 -73.113)" fill="#eb5b56"/>
+    <text id="Proudly_Produced_in_Europe" data-name="Proudly Produced in Europe" transform="translate(-128.374 -140.844)" fill="#eb5b56" font-size="9" font-family="FuturaPT-Bold, Futura PT" font-weight="700" letter-spacing="0.01em"><tspan x="-20.488" y="9">PROUDLY </tspan><tspan x="-30.069" y="18">PRODUCED IN </tspan><tspan x="-17.059" y="27">EUROPE</tspan></text>
+    <path id="stars_favorite_bookmark_like" data-name="stars, favorite, bookmark, like" d="M1.537,9.488a1,1,0,0,0,.326,1.041l4.8,3.963-1.515,6.79a1,1,0,0,0,1.56,1.03L12,18.509l5.287,3.8a1,1,0,0,0,1.56-1.03l-1.515-6.79,4.805-3.963a1,1,0,0,0-.492-1.761l-5.817-.849L12.9,2.053a1.042,1.042,0,0,0-1.79,0L8.172,7.919l-5.817.849a1,1,0,0,0-.818.72Zm7.441.335a1,1,0,0,0,.75-.542L12,4.736l2.272,4.545a1,1,0,0,0,.75.542l4.1.6L15.586,13.34a1,1,0,0,0-.339.989l1.076,4.826-3.739-2.69a1,1,0,0,0-1.168,0l-3.739,2.69,1.076-4.826a1,1,0,0,0-.339-.989L4.876,10.421Z" transform="translate(-105.874 -166.388)" fill="#eb5b56" stroke="rgba(255,150,146,0.3)" stroke-width="0.8"/>
+  </g>
+</svg>

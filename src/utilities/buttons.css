@@ -1,0 +1,39 @@
+.btn {
+    @apply inline-block py-10px px-30px transition-all rounded-30px text-16px font-futurabold uppercase cursor-pointer;
+
+    &:hover {
+        @apply bg-mint text-white;
+    }
+
+    &-primary {
+        @apply bg-mint text-white border border-mint; 
+
+        &:hover {
+            @apply bg-lightpurple border-lightpurple text-white;
+        }
+    }
+
+    &-secondary {
+        @apply bg-transparent border text-purple border-purple;
+    }
+
+    &-tertiary {
+        @apply bg-red text-white;
+    }
+
+    &-lightpurple {
+        @apply bg-lightpurple text-white;
+    }
+
+    &-full {
+        @apply w-full text-center text-18px py-15px;
+    }
+
+    &-yellow {
+        @apply bg-yellow text-gray;
+    }
+
+    &-medium {
+        @apply py-10px;
+    }
+}

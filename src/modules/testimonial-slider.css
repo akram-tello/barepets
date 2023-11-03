@@ -1,0 +1,62 @@
+.module--testimonial-slider {
+    @apply py-40px md:py-80px bg-purple text-white;
+
+    .module-title {
+        @apply text-center mb-15px md:mb-40px;
+    }
+
+    .wrapper {
+        @apply relative z-[2];
+    }
+
+    .testimonials-slider {
+        
+        .icons {
+            @apply flex justify-between mt-15px;
+
+            &-item {
+                @apply flex-30% text-center;
+
+                svg {
+                    @apply h-40px mb-10px w-auto mx-auto block;
+                }
+
+                p {
+                    @apply text-14px md:text-18px md:px-10px;
+                }
+            }
+        }
+
+        &__item {
+            @apply md:flex md:justify-between;
+
+            h3 {
+                @apply text-mint text-18px md:text-28px font-gilroybold mb-10px;
+            }
+
+            p {
+                @apply text-12px md:text-14px mb-20px;
+
+                &.name {
+                    @apply font-bold mb-0;
+                }
+            }
+        }
+
+        &__photo {
+            @apply md:flex-55%;
+        }
+
+        &__quote {
+            @apply md:flex-40%;
+        }
+
+        .owl-nav {
+            @apply relative z-[2] mt-25px md:mt-0 md:absolute bottom-0 md:right-0 md:left-auto lg:right-auto lg:left-[60%];
+
+            button {
+                @apply text-30px mr-15px;
+            }
+        }
+    }
+}

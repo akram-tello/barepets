@@ -1,0 +1,32 @@
+.module--additional {
+    @apply clear-both fixed top-[50%] left-0 w-full max-w-85% md:max-w-[540px] translate-y-[-50%] z-[10] translate-x-[-100%] transition;
+
+    &.active {
+        @apply translate-x-0;
+    }
+
+    .additional {
+        @apply rounded-tr-30px py-0 px-25px md:px-50px bg-mint relative;
+
+        .js-additional-trigger {
+            @apply cursor-pointer bg-mint text-white uppercase text-16px inline-block py-10px px-20px font-futurabold w-200px text-center;
+            @apply absolute bottom-200px left-[100%] rotate-[90deg] origin-bottom-left rounded-tr-15px rounded-tl-15px;
+        } 
+    }
+
+    .faq-list {
+        &__item {
+            .faq-question {
+                @apply border-white text-white;
+            }
+
+            &:last-child .faq-question {
+                @apply border-b-0;
+            }
+
+            .faq-answer {
+                @apply text-white;
+            }
+        }
+    }
+}

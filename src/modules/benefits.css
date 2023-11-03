@@ -1,0 +1,207 @@
+.module--benefits {
+    @apply relative py-30px md:py-50px text-center;
+
+    .bg {
+        @apply absolute top-0 left-0 w-full h-full object-cover object-left-bottom;
+    }
+
+    .wrapper,
+    .foods {
+        @apply relative z-[2];
+    }
+
+    .benefits {
+        @apply mt-40px flex justify-between flex-wrap relative max-w-[995px] mx-auto lg:grid;
+
+        &--holder {
+            @apply mb-10px md:mb-20px;
+
+            &:hover {
+                .benefits-shop-now {
+                    @apply opacity-100;
+                }
+            }
+        }
+
+        &--item {
+            @apply relative flex-half md:flex-295 bg-white rounded-10px rounded-bl-0 flex items-center justify-center py-15px px-10px;
+
+            box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.16);
+            -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.16);
+            -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.16);
+
+            &:hover {
+                .benefits-overlay {
+                    @apply block;
+                }
+            }
+
+            &:before {
+                content: '';
+                @apply block absolute bottom-0 left-0 translate-y-[100%];
+                width: 0;
+                height: 0;
+                border-width: 10px 10px 0 0;
+                border-color: white transparent transparent transparent;
+                border-style: solid;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 30px;
+            grid-template-areas: 
+            "r1c1 r1c2 r1c3"
+            ". r2c2 r2c3"
+            ". r3c2 r3c3";
+
+            .benefits--holder {
+                &:nth-child(1) {
+                    grid-area: r1c1;
+                }
+
+                &:nth-child(2) {
+                    grid-area: r1c2;
+                }
+
+                &:nth-child(3) {
+                    grid-area: r1c3;
+                }
+
+                &:nth-child(4) {
+                    grid-area: r2c2;
+                    @apply translate-x-[-30px];
+                }
+
+                &:nth-child(5) {
+                    grid-area: r2c3;
+                    @apply translate-x-[-30px];
+                }
+
+                &:nth-child(6) {
+                    grid-area: r3c2;
+                    @apply translate-x-[-60px];
+                }
+
+                &:nth-child(7) {
+                    grid-area: r3c3;
+                    @apply translate-x-[-60px];
+                }
+            }
+        }
+
+        &-info {
+            p.tagline {
+                @apply text-12px md:text-14px;
+            }
+            
+            h3 {
+                @apply text-14px md:text-24px font-gilroyblack;
+
+                &.color-red { @apply text-red; }
+                &.color-lightpurple { @apply text-[#9F9FBF]; }
+                &.color-orange { @apply text-orange; }
+                &.color-yellow { @apply text-yellow; }
+                &.color-blue { @apply text-lightblue; }
+                &.color-mint { @apply text-mint; }
+                &.color-purple { @apply text-lightpurple; }
+            }
+        }
+
+        &-overlay {
+            @apply hidden absolute bottom-0 left-0 z-[2] py-10px md:py-15px px-20px text-12px rounded-10px rounded-bl-0;
+
+            &:before {
+                content: '';
+                @apply block absolute bottom-0 left-0 translate-y-[100%];
+                width: 0;
+                height: 0;
+                border-width: 10px 10px 0 0;
+                border-style: solid;
+            }
+
+            &.bg-red { 
+                @apply bg-red border-red; 
+                &:before { border-color: #EB5B56 transparent transparent transparent; }
+            }
+
+            &.bg-lightpurple { 
+                @apply bg-[#9F9FBF]; 
+                &:before { border-color: #9F9FBF transparent transparent transparent; }
+
+            }
+
+            &.bg-orange { 
+                @apply bg-orange; 
+                &:before { border-color: #EA7B49 transparent transparent transparent; }
+            }
+
+            &.bg-yellow { 
+                @apply bg-yellow; 
+                &:before { border-color: #F9CF4F transparent transparent transparent; }
+            }
+            
+            &.bg-blue { 
+                @apply bg-lightblue; 
+                &:before { border-color: #04A6D5 transparent transparent transparent; }
+            }
+            
+            &.bg-mint { 
+                @apply bg-mint; 
+                &:before { border-color: #6BC5B1 transparent transparent transparent; }
+            }
+            
+            &.bg-purple { 
+                @apply bg-lightpurple border-lightpurple; 
+                &:before { content: ''; border-color: #6565A0 transparent transparent transparent; }
+            }
+
+            p {
+                @apply text-white md:text-12px;
+
+                font-size: 1em;
+            }
+
+            &.with-photo {
+                @apply md:pr-70px;
+
+                img {
+                    @apply hidden md:block absolute top-[50%] right-0 translate-y-[-50%] translate-x-[50%];
+                }
+            }
+        }
+
+        &-shop-now {
+            @apply opacity-0;
+
+            a {
+                @apply font-futurabold uppercase text-mint;
+                background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNS4zMTEiIGhlaWdodD0iMTEuODUxIiB2aWV3Qm94PSIwIDAgMTUuMzExIDExLjg1MSI+CiAgPGcgaWQ9Ikdyb3VwXzM1MjkiIGRhdGEtbmFtZT0iR3JvdXAgMzUyOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTg1MC42NjcgLTQ0NS4wODYpIj4KICAgIDxwYXRoIGlkPSJQYXRoXzI2Njg0IiBkYXRhLW5hbWU9IlBhdGggMjY2ODQiIGQ9Ik04NTEuNjY3LDQ1MS40NjdoMTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTAuOTY3KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmJjNWIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHBhdGggaWQ9IlBhdGhfMjY2ODUiIGRhdGEtbmFtZT0iUGF0aCAyNjY4NSIgZD0iTTg2MC40NjcsNDQ2LjM2NWw0LjUxMSw0LjUxMS00LjUxMSw0LjUxMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjEzNSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZiYzViMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8L2c+Cjwvc3ZnPgo=') 98% center no-repeat;
+                @apply pr-6 bg-right;
+            }
+        }
+    }
+
+    .foods {
+        @apply w-[750px] flex mx-auto;
+
+        &-wrapper {
+            @apply overflow-x-scroll lg:absolute bottom-100px right-[15%];
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            
+            /* Hide scrollbar for IE, Edge and Firefox */
+            & {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+        }
+
+        p {
+            @apply text-12px font-futurabold text-purple uppercase;
+        }
+    }
+
+}
