@@ -1,5 +1,17 @@
 .site-footer {
     @apply bg-purple text-white relative pb-150px overflow-hidden pt-40px;
+
+    .floating-grab-bare {
+        @apply bg-white fixed bottom-0 left-0 right-0 m-[auto]  pt-[20px] w-[300px] h-[100px] ;
+        border-radius: 50%/100px 100px 0 0;
+        font-family: gilroyextrabold, sans-serif;
+        z-index: 9;
+
+        a{
+            @apply flex justify-center items-center text-[#1f1a43] tracking-[0.5px] text-[#2a294f];
+        }
+         
+    }
 }
 
 .footer-items {

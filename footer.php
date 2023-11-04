@@ -11,6 +11,17 @@
 
 ?>
 	<footer id="colophon" class="site-footer">
+		<?php if(is_front_page()){ ?>
+		<div class="floating-grab-bare">
+			<a href="">
+				<span>grab a</span>
+				<span>
+					<img width="80px" data-src="<?= get_template_directory_uri() ?>/img/dog-bottom.png" src="<?= get_template_directory_uri() ?>/img/placeholder.png" alt="">
+				</span>
+				<span>bare</span>
+			</a>
+		</div>
+		<?php } ?>
 		<div class="footer-main">
 			<div class="wrapper">
 				<div class="footer-items">

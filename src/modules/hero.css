@@ -1,5 +1,13 @@
+
 .home #page {
     @apply mt-[-80px] md:mt-[-90px];
+
+    .module--hero{
+        @apply z-10;
+    }
+    .module--text-scroller{
+        @apply z-10 relative;
+    }
 }
 
 .module--hero {

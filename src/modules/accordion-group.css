@@ -25,7 +25,7 @@ html {
             @apply block w-1/2 p-2.5 min-w-[150px];
             
             a {
-                @apply flex items-center w-full h-full p-4 text-purple text-14px leading-none uppercase font-bold rounded-md bg-white shadow-lg;
+                @apply flex items-center w-full h-full p-4 text-purple text-14px leading-none uppercase font-bold rounded-md bg-white shadow-lg tracking-[1.4px];
                 -webkit-transition: all 400ms ease-out;
                 -moz-transition: all 400ms ease-out;
                 -o-transition: all 400ms ease-out;
@@ -34,11 +34,16 @@ html {
                 &.active {
                     @apply bg-purple text-white;
                 }
+
+                &:not(.active) {
+                    @apply text-[#9DA9B3];
+                }
     
                 &:hover {
                     @apply bg-purple text-white;
                 }
             }
+
         }
     }
     
@@ -79,7 +84,8 @@ html {
     }
 
     .group-title {
-        @apply text-30px bg-lightgray py-2.5 pl-4 pr-16;
+        font-family: gilroyextrabold, sans-serif;
+        @apply text-30px bg-lightgray py-2.5 pl-4 pr-16 tracking-[0.9px];
     }
 
     .group-wrapper {
@@ -110,13 +116,19 @@ html {
                         }
                     }
                 }
+
+                h4 {
+                    font-family: gilroyextrabold, sans-serif;
+                    @apply pr-[20px] text-[16px] tracking-[0.48px];
+                }
             }
             .accordion-content {
-                @apply max-h-0 overflow-hidden opacity-0;
+                @apply max-h-0 overflow-hidden opacity-0 tracking-[0.42px];
                 -webkit-transition: all 400ms ease-out;
                 -moz-transition: all 400ms ease-out;
                 -o-transition: all 400ms ease-out;
                 transition: all 400ms ease-out;
+                font-family: gilroylight, sans-serif;
 
                 * {
                     @apply leading-tight;
@@ -129,7 +141,7 @@ html {
 
             &.active {
                 .accordion-content {
-                    @apply max-h-80 opacity-100;
+                    @apply max-h-80 opacity-100 pt-[10px];
                 }
 
                 .icon-vertical {

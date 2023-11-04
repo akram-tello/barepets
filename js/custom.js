@@ -106,6 +106,14 @@
             autoplayTimeout: 6000,
             items: 1
         });
+        jQuery('.comparison-table__others .other-products').owlCarousel({
+            loop: true,
+            nav: true,
+            dots: true,
+            autoplay: false,
+            autoHeight: true,
+            items: 1
+        });
     }
 
     // HERO SLIDER
@@ -302,6 +310,13 @@
                 $(this).siblings('.accordion-wrapper').children('.accordion-content').removeClass('active');;
             });
         });
+
+        //Accordion Group Navigation active state
+        jQuery('.accordion-group-left .button-wrapper a').on('click', function(){
+            var attr = jQuery(this).attr('data-target')
+            jQuery(this).addClass('active')
+            jQuery('a:not([data-target="'+attr+'"])').removeClass('active')
+        })
     
         //Accordion Group
         $('.js-navigation-carousel').owlCarousel({

@@ -23,7 +23,7 @@
             </div>
             <div class="comparison-table__others">
                 <div class="other-products">
-                    <div class="other-toggle">
+                    <!-- <div class="other-toggle ">
                         <div class="other-choices">
                             <div class="toggle js-toggle"></div>
                             <ul>
@@ -47,7 +47,7 @@
                                 <?php endif ?>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <?php $i = 0; ?>
                     <?php if( have_rows('compare') ): ?>
                         <?php while( have_rows('compare') ): the_row(); ?>

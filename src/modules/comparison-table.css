@@ -47,11 +47,11 @@
     }
 
     .comparison-table {
-        @apply mt-20px flex items-center justify-center;
+        @apply mt-20px flex items-start md:items-center justify-center relative pb-[50px] md:pb-0;
 
         &__bare {
             flex: 0 0 66%;
-            @apply md:flex-full;
+            @apply md:flex-full flex relative justify-end;
 
             img {
                 @apply block mx-auto;
@@ -60,16 +60,55 @@
 
         &__others {
             flex: 0 0 34%;
-            @apply block md:hidden;
+            @apply block md:hidden w-[20%] flex overflow-hidden;
         }
 
         .other-products {
-            @apply relative; 
+            @apply  w-full; 
             &__item {
-                @apply hidden;
+                @apply block;
 
                 &.active {
                     @apply block;
+                }
+            }
+            .owl-stage {
+                @apply flex;
+            }
+            .owl-nav {
+                margin: auto;
+                @apply absolute left-0 right-0 bottom-0 flex justify-between ;
+                
+                button {
+                    text-indent: -99em;
+                    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBpZD0iSWNvbl9pb25pYy1pb3MtYXJyb3ctZHJvcHJpZ2h0LWNpcmNsZSIgZGF0YS1uYW1lPSJJY29uIGlvbmljLWlvcy1hcnJvdy1kcm9wcmlnaHQtY2lyY2xlIiBkPSJNMjcuMzc1LDE1LjM3NWExMiwxMiwwLDEsMS0xMi0xMkExMiwxMiwwLDAsMSwyNy4zNzUsMTUuMzc1Wm0tMTQuMTA2LDBMMTcuOTk0LDEwLjdhMS4xMTQsMS4xMTQsMCwxLDAtMS41NzUtMS41NzVsLTUuNSw1LjUyMWExLjExMiwxLjExMiwwLDAsMC0uMDM1LDEuNTM1bDUuNDIzLDUuNDRhMS4xMTIsMS4xMTIsMCwxLDAsMS41NzUtMS41NjlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4zNzUgLTMuMzc1KSIgZmlsbD0iI2UxZTFlMSIvPgo8L3N2Zz4K) center no-repeat;
+                    background-size: contain;
+                    z-index: 9;
+                    @apply absolute bottom-0 h-[25px] w-[25px] overflow-hidden rounded-[100%] bg-[#2a294f];
+
+                    &.owl-next {
+                        right: 10%;
+                        --tw-scale-x: -1;
+                        transform: var(--tw-transform);
+                    }
+
+                    &.owl-prev {
+                        left: 10%;
+                    }
+                    
+                }
+            }
+            .owl-dots {
+                 margin: auto;
+                @apply absolute left-0 right-0 bottom-[7px] flex justify-center;
+
+                button {
+                    
+                    @apply ml-[5px] mr-[5px] h-[15px] w-[15px] rounded-[9999px] bg-white;
+
+                    &.active {
+                        @apply bg-[#6bc5b1];
+                    }
                 }
             }
         }

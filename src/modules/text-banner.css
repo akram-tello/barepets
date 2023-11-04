@@ -13,6 +13,12 @@
                 content: '';
                 @apply block pt-[25%];
             }
+            @media (max-width: 1199px) {
+                & {
+                    background-size: 102%;
+                    background-position: bottom;
+                }
+            }
         }
     
         .decor-bot {
@@ -23,6 +29,13 @@
             &:before {
                 content: '';
                 @apply block pt-[180px];
+            }
+
+             @media (max-width: 1199px) {
+                & {
+                    background-size: 102%;
+                    
+                }
             }
         }
     }
@@ -39,6 +52,12 @@
                 content: '';
                 @apply block pt-[25%];
             }
+             @media (max-width: 1199px) {
+                & {
+                    background-size: 102%;
+                    background-position: bottom;
+                }
+            }
         }
     
         .decor-bot {
@@ -49,6 +68,13 @@
             &:before {
                 content: '';
                 @apply block pt-[30%];
+            }
+
+             @media (max-width: 1199px) {
+                & {
+                    background-size: 102%;
+                    
+                }
             }
         }
     }
