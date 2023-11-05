@@ -24,6 +24,21 @@
             'paged' => $paged
         );
 
+    elseif(isset($_POST['filter'])) :
+        $filter = '';
+        
+        if($_POST['filter'] == 'recent'){
+            $filter = 'date';
+        }
+        
+        $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 9,
+            'orderby' => $filter,
+            'order' => 'DESC'
+        );
+
     else :
         
         $args = array(
@@ -43,10 +58,12 @@
 <section class="module module--blog-section <?= $className ?>">
     <div class="wrapper">
         <div class="blog-sidebar">
+            
             <div class="sidebar-sections blog-search">
                 <h4>Search</h4>
-                <form action="<?= home_url( '/blog/' ) ?>" method="get">
+                <form action="<?= home_url( '/blog/' ) ?>" method="post">
                     <input type="search" name="search" id="search" placeholder="Search..">
+                    <i class="fa fa-search" aria-hidden="true"></i>
                     <button><?= get_template_part('img/icon-search.svg') ?></button>
                 </form>
             </div>
@@ -86,6 +103,17 @@
             </div>
         </div>
         <div class="blog-listing">
+            <div class="blog-filter">
+                <form action="<?= home_url( '/blog/' ) ?>" method="get">
+                    <select name="filter" id="filter">
+                      <option value="default" disabled selected>Filter by</option>
+                      <option value="all" style="border-bottom: 1px solid">All Posts</option>
+                      <option value="recent">Recent</option>
+                      <option value="most-viewed">Most Views</option>
+                    </select>
+                    <!-- <input type="submit" name="submit" value="Submit" hidden> -->
+                </form>
+            </div>
         <?php if ( $the_query->have_posts() ) : ?>
             <div class="blog-grid">
 
@@ -111,7 +139,7 @@
                             <span class="date"><?= get_the_date('M, d h:i A'); ?></span>
                         </div>
                         <div class="post-excerpt">
-                            <?= get_the_excerpt(); ?>
+                            <?php  echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
                         </div>
                         <div class="post-link">
                             <a href="<?= get_the_permalink(); ?>">Read Full Article</a>

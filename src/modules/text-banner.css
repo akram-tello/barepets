@@ -80,7 +80,7 @@
     }
 
     .text-banner {
-        @apply flex justify-between flex-wrap py-10px;
+        @apply flex justify-center lg:justify-between flex-wrap py-10px gap-x-[10px];
 
         &__item {
             @apply flex-half md:flex-30% lg:flex-18% flex md:min-h-[240px] text-center items-center mb-35px lg:mb-0;

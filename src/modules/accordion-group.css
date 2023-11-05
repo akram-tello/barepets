@@ -74,6 +74,25 @@ html {
             }
         }
     }
+
+    .accordion-search {
+        form{
+            @apply p-2.5;
+
+            input {
+                @apply rounded-[5px] w-full h-[48px] mt-[20px] pl-[35px] pr-[20px] outline-none;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 0.25px solid #5C605F;
+            }
+
+            i {
+                @apply absolute left-[11px] h-[46px] bg-white flex items-center top-[31px] pl-[10px] pr-[11px] outline-none rounded-[5px] text-[#5C605F];
+            }
+        }
+        
+
+    }
+
 }
 
 .accordion-group-right {

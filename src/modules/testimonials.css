@@ -37,7 +37,7 @@
      }
 
     .owl-nav {
-        @apply absolute bottom-[-130px] md:bottom-[-50px] left-0 md:mt-30px z-[5]; 
+        @apply absolute bottom-[-80px] md:bottom-[-50px] left-0 md:mt-30px z-[5]; 
 
         button {
             @apply text-white w-30px h-30px rounded-full transition mr-15px;

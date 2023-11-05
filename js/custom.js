@@ -382,7 +382,7 @@
             });
     
             $(window).on('scroll', function(){
-                navigation_bottom = $('.accordion-group-left').offset().top + $('.accordion-group-left').height() - ($('.accordion-group-left .navigation').height() + 100);
+                navigation_bottom = $('.accordion-group-left').offset().top + $('.accordion-group-left').height() - ($('.accordion-group-left .navigation').height() + 200);
                 scroll_top = $('html').scrollTop();
     
                 if(scroll_top > navigation_top && scroll_top < navigation_bottom) {
@@ -401,6 +401,10 @@
     
         $('.blog-categories').click(function(){
             $(this).children('.category-list').toggleClass('expand');
+        });
+
+        jQuery('#filter').on('change', function() {
+            this.form.submit();
         });
     
     });

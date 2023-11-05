@@ -11,7 +11,7 @@
                 @apply mb-10;
 
                 h4 {
-                    @apply text-18px text-mint uppercase mb-2;
+                    @apply text-18px text-mint uppercase mb-2 tracking-[1.8px];
                 }
 
                 &.blog-search {
@@ -19,13 +19,18 @@
                         @apply relative;
 
                         input[type="search"] {
-                            @apply block w-full py-3 pl-6 pr-8 rounded-full text-14px leading-none;
+                            @apply block w-full py-3 pl-6 pr-8 rounded-full text-14px leading-none outline-none;
                             border: 1px solid #6BC5B1;
                         }
 
                         button {
                             @apply absolute right-4 z-10;
                             top: calc(50% - 9px);
+                        }
+                        i {
+                            @apply absolute bottom-0 top-[1px] m-[auto] right-[1px] text-[#909E9D] h-[42px] flex items-center justify-center bg-white pr-[20px] pl-[5px];
+                            border-radius: 0 9999px 9999px 0;
+                            z-index: 9;
                         }
                     }
 
@@ -35,7 +40,7 @@
                     @apply relative;
 
                     h4 {
-                        @apply flex flex-wrap items-center;
+                        @apply flex flex-wrap items-center tracking-[1.8px];
 
                         .dropdown-arrow {
                             @apply block md:hidden ml-2;
@@ -51,7 +56,7 @@
                     }
     
                     .category {
-                        @apply text-14px py-2.5;
+                        @apply text-14px py-2.5 tracking-[1.2px] ;
                         border-bottom: 1px solid #9F9FBF;
     
                         a {
@@ -102,6 +107,23 @@
         .blog-listing {
             @apply w-full md:w-3/4;
 
+            .blog-filter {
+                form {
+                    @apply text-right pr-[12px];
+
+                    select {
+                        @apply w-[136px] h-[33px] rounded-[14px] pl-[10px] outline-none mb-[25px] tracking-[0.4px] text-[#6565A0];
+                        border: 1px solid #9F9FBF;
+                        background-image: linear-gradient(45deg, transparent 50%, #9F9FBF 50%), linear-gradient(135deg, #9F9FBF 50%, transparent 50%);
+                        background-position: calc(100% - 20px) calc(1em + -4px), calc(100% - 15px) calc(1em + -4px), calc(100% - 2.5em) 0.5em;
+                        background-size: 5px 5px, 5px 5px, 1px 1.5em;
+                        background-repeat: no-repeat;
+                        -webkit-appearance: none;
+                        appearance: none;
+                    }
+                }
+            }
+
             .blog-grid {
                 @apply flex flex-wrap;
 
@@ -111,12 +133,17 @@
                     border: 1px solid #E1E1E1;
 
                     .blog-wrapper {
+                        @apply relative h-full pb-[50px];
 
                         .featured-image {
                             @apply relative;
 
                             .category {
-                                @apply absolute top-4 left-4 inline-block text-12px leading-none font-bold uppercase text-mint bg-white py-2 px-4 rounded-full;
+                                @apply tracking-[1.2px] absolute top-4 left-4 inline-block text-12px leading-none font-bold uppercase text-mint bg-white py-2 px-4 rounded-full;
+                            }
+
+                            img {
+                                @apply min-h-[200px] object-cover object-top;
                             }
                         }
 
@@ -124,13 +151,15 @@
                             @apply px-4 pt-3;
                             h3 {
                                 @apply text-28px lowercase;
+                                font-family: gilroyextrabold, sans-serif;
                             }
                         }
 
                         .post-info {
                             @apply px-4;
                             .date {
-                                @apply text-12px uppercase text-pale;
+                                @apply text-12px uppercase text-pale tracking-[1.2px];
+                                font-family: gilroybold, sans-serif;
                             }
                         }
 
@@ -139,7 +168,7 @@
                         }
 
                         .post-link {
-                            @apply px-4 pb-4;
+                            @apply px-4 pb-4 absolute bottom-0 w-full tracking-[1.2px];
                             a {
                                 @apply text-12px text-mint uppercase font-bold underline;
                             }
@@ -149,7 +178,7 @@
             }
 
             .pagination {
-                @apply flex flex-wrap items-center justify-center;
+                @apply flex flex-wrap items-center justify-center pb-[40px] pt-[50px];
 
                 .page-numbers {
                     @apply flex flex-wrap items-center justify-center w-7 md:w-10 h-7 md:h-10 rounded-full font-bold mx-2 text-12px md:text-18px;
