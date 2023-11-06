@@ -156,10 +156,19 @@
                         }
 
                         .post-info {
-                            @apply px-4;
+                            @apply px-4 flex items-center justify-between gap-[10px] flex-wrap;
+                            
                             .date {
                                 @apply text-12px uppercase text-pale tracking-[1.2px];
                                 font-family: gilroybold, sans-serif;
+                            }
+
+                            .post-view {
+                                @apply text-[#909e9d];
+                                i {
+                                    font: normal normal normal 14px/1 FontAwesome;
+                                    font-size: inherit;
+                                }
                             }
                         }
 

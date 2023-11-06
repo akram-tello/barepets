@@ -41,7 +41,9 @@ $other_query = new WP_Query( $other_args );
 									<h5><a href="<?= get_the_permalink(); ?>"><?= get_the_title(); ?></a></h5>
 								</div>
 							</div>
+
 						<?php endwhile; ?>
+
 					<?php else : ?>
 						<p>Sorry, no posts matched your criteria.</p>
 					<?php endif; ?>
@@ -71,7 +73,7 @@ $other_query = new WP_Query( $other_args );
 					/*if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif;*/
-
+					gt_set_post_view();
 				endwhile; // End of the loop.
 				?>
 			</div>

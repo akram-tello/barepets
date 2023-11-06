@@ -7270,6 +7270,11 @@ html {
                                 font-family: gilroyextrabold, sans-serif;
 }
 .module--blog-section .wrapper .blog-listing .blog-grid .blog-item .blog-wrapper .post-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -7282,6 +7287,14 @@ html {
 	color: rgba(144, 158, 157, var(--tw-text-opacity));
                                 font-family: gilroybold, sans-serif;
 }
+.module--blog-section .wrapper .blog-listing .blog-grid .blog-item .blog-wrapper .post-info .post-view {
+	--tw-text-opacity: 1;
+	color: rgba(144, 158, 157, var(--tw-text-opacity));
+}
+.module--blog-section .wrapper .blog-listing .blog-grid .blog-item .blog-wrapper .post-info .post-view i {
+                                    font: normal normal normal 14px/1 FontAwesome;
+                                    font-size: inherit;
+                                }
 .module--blog-section .wrapper .blog-listing .blog-grid .blog-item .blog-wrapper .post-excerpt {
 	padding-left: 1rem;
 	padding-right: 1rem;

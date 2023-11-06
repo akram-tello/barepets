@@ -24,20 +24,46 @@
             'paged' => $paged
         );
 
-    elseif(isset($_POST['filter'])) :
+    elseif(isset($_GET['filter'])) :
         $filter = '';
         
-        if($_POST['filter'] == 'recent'){
+        if($_GET['filter'] == 'recent') :
+
             $filter = 'date';
-        }
+            $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 9,
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            );
+
         
-        $args = array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => 9,
-            'orderby' => $filter,
-            'order' => 'DESC'
-        );
+        elseif($_GET['filter'] == 'most-viewed') :
+            
+            $filter = 'post_views_count';
+
+            $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 9,
+                'meta_key' =>  $filter,
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+            );
+
+        elseif($_GET['filter'] == 'all') :
+            
+            $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => -1,
+            );
+   
+
+        
+        endif;
+
 
     else :
         
@@ -61,7 +87,7 @@
             
             <div class="sidebar-sections blog-search">
                 <h4>Search</h4>
-                <form action="<?= home_url( '/blog/' ) ?>" method="post">
+                <form action="<?= home_url( '/blog/' ) ?>" method="get">
                     <input type="search" name="search" id="search" placeholder="Search..">
                     <i class="fa fa-search" aria-hidden="true"></i>
                     <button><?= get_template_part('img/icon-search.svg') ?></button>
@@ -137,6 +163,7 @@
                         </div>
                         <div class="post-info">
                             <span class="date"><?= get_the_date('M, d h:i A'); ?></span>
+                            <?= gt_get_post_view(); ?>
                         </div>
                         <div class="post-excerpt">
                             <?php  echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
