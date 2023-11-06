@@ -6896,6 +6896,9 @@ html {
         line-height: 35px;
         letter-spacing: 0.9px;
     }
+.accordion-group-right.result .group-wrapper:not(.found) {
+	display: none;
+}
 .accordion-group-right .group-wrapper {
 	position: relative;
 	margin-bottom: 3.5rem;

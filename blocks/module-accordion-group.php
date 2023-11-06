@@ -50,105 +50,44 @@
             </div>
         </div>
         <div class="accordion-group-right">
-            <div hidden>
-                <div id="all" class="anchor-link"></div>
-                <?php if(have_rows('accordion_groups')) : ?>
-                    <?php while(have_rows('accordion_groups')) : the_row(); ?>
+            <div id="all" class="anchor-link"></div>
+            <?php if(have_rows('accordion_groups')) : ?>
+                <?php while(have_rows('accordion_groups')) : the_row(); ?>
 
-                        <?php $heading = get_sub_field('heading'); ?>
+                    <?php $heading = get_sub_field('heading'); ?>
 
-                        <div class="group-wrapper">
-                            <div id="<?= str_replace(' ', '-', strtolower($heading)) ?>" class="anchor-link"></div>
-                            <h3 class="group-title"><?= $heading ?></h3>
-                            <?php if(have_rows('accordion_subgroup')) : ?>
-                                <?php while(have_rows('accordion_subgroup')) : the_row(); ?>
+                    <div class="group-wrapper">
+                        <div id="<?= str_replace(' ', '-', strtolower($heading)) ?>" class="anchor-link"></div>
+                        <h3 class="group-title"><?= $heading ?></h3>
+                        <?php if(have_rows('accordion_subgroup')) : ?>
+                            <?php while(have_rows('accordion_subgroup')) : the_row(); ?>
 
-                                    <?php
-                                        $title = get_sub_field('title');
-                                        $content = get_sub_field('content');
-                                    ?>
+                                <?php
+                                    $title = get_sub_field('title');
+                                    $content = get_sub_field('content');
+                                ?>
 
-                                    <div class="accordion-wrapper">
-                                        <div class="title-wrapper">
-                                            <div class="accordion-icon">
-                                                <span class="icon-part icon-vertical"></span>
-                                                <span class="icon-part icon-horizontal"></span>
-                                            </div>
-                                            <h4><?= $title ?></h4>
+                                <div class="accordion-wrapper">
+                                    <div class="title-wrapper">
+                                        <div class="accordion-icon">
+                                            <span class="icon-part icon-vertical"></span>
+                                            <span class="icon-part icon-horizontal"></span>
                                         </div>
-                                        <div class="accordion-content">
-                                            <?= $content ?>
-                                        </div>
+                                        <h4><?= $title ?></h4>
                                     </div>
-
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
-            <div class="search-result">
-                <?php
-                    $args = array(
-                            'numberposts'   => -1,
-                            'meta_query'    => array(
-                                'relation'      => 'OR',
-                                array(
-                                    'key'       => 'title',
-                                    'compare'   => 'LIKE',
-                                    'value'     => $_GET['search'],
-                                ),
-                                array(
-                                    'key'       => 'content',
-                                    'compare'   => 'LIKE',
-                                    'value'     => $_GET['search'],
-                                )
-                            )
-                        );
-                        $the_query = new WP_Query( $args );
-
-                        echo "<pre>";
-                        var_dump($the_query);
-                         echo "</pre>";
-                ?>
-                <?php if(have_rows('accordion_groups')) : ?>
-                    <?php while(have_rows('accordion_groups')) : the_row(); ?>
-
-                        <?php $heading = get_sub_field('heading'); ?>
-
-                        <div class="group-wrapper">
-                            <div id="<?= str_replace(' ', '-', strtolower($heading)) ?>" class="anchor-link"></div>
-                            <h3 class="group-title"><?= $heading ?></h3>
-                            <?php if(have_rows('accordion_subgroup')) : ?>
-                                <?php while(have_rows('accordion_subgroup')) : the_row(); ?>
-
-                                    <?php
-                                        $title = get_sub_field('title');
-                                        $content = get_sub_field('content');
-                                    ?>
-
-                                    <div class="accordion-wrapper">
-                                        <div class="title-wrapper">
-                                            <div class="accordion-icon">
-                                                <span class="icon-part icon-vertical"></span>
-                                                <span class="icon-part icon-horizontal"></span>
-                                            </div>
-                                            <h4><?= $title ?></h4>
-                                        </div>
-                                        <div class="accordion-content">
-                                            <?= $content ?>
-                                        </div>
+                                    <div class="accordion-content">
+                                        <?= $content ?>
                                     </div>
+                                </div>
 
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
-            
+                <?php endwhile; ?>
+            <?php endif; ?>
+          
+          
         </div>
 
     </div>

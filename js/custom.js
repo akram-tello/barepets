@@ -298,6 +298,31 @@
 
     jQuery(document).ready(function($){
 
+        function contains(selector, text) {
+          var elements = document.querySelectorAll(selector);
+          return Array.prototype.filter.call(elements, function(element){
+            if( RegExp(text).test(element.textContent) ){
+                element.classList.add("found")
+            }else{
+                element.classList.remove("found")
+            }
+          });
+        }
+
+        var url_string = location.href; 
+        var url = new URL(url_string);
+        let searchParams = new URLSearchParams(url.search);
+
+        contains('.group-wrapper', searchParams.get('search'))
+        console.log(searchParams.get('search'))
+        if(searchParams.get('search') != null){
+            jQuery('.accordion-group-right').addClass('result')
+            jQuery('.accordion-group-left .navigation').css('display', 'none')
+            // jQuery('.accordion-group-left .search-reset').css('display', 'block')
+        }else{
+            // jQuery('.accordion-group-left .search-reset').css('display', 'none')
+        }
+
         // For safari Autoplay
         jQuery('video').attr('playsinline', '')
 

@@ -107,6 +107,12 @@ html {
         @apply text-30px bg-lightgray py-2.5 pl-4 pr-16 tracking-[0.9px];
     }
 
+    &.result {
+        .group-wrapper:not(.found) {
+            @apply hidden;
+        }
+    }
+
     .group-wrapper {
         @apply relative mb-14 md:mb-24;
 
